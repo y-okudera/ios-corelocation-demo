@@ -15,9 +15,9 @@ iOS8以降でデバイスの位置情報を使用する場合は、Info.plistに
 - アプリがフォアグラウンドにある間のみ位置情報を使用する場合
 <br>“Privacy - Location When In Use Usage Description”に使用目的を記述する
 
-ここで記述した使用目的は、ユーザーに位置情報を使用する許可を求めるアラートに表示されます。
-
 ![info.plistのイメージ](https://github.com/stv-yokudera//ios-corelocation-demo/wiki/images/info-plist.png)
+
+ここで記述した使用目的は、ユーザーに位置情報を使用する許可を求めるアラートに表示されます。
 
 ![requestAlwaysAuthorizationのイメージ](https://github.com/stv-yokudera//ios-corelocation-demo/wiki/images/requestAlwaysAuthorization.jpg)
 
@@ -36,7 +36,7 @@ iOS8以降でデバイスの位置情報を使用する場合は、Info.plistに
 | Xcode | 8.2.1 |
 | iOS | 10.0~ |
 ## 参考
-https://developer.apple.com/reference/corelocation
+https://developer.apple.com/reference/corelocation<br>https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html
 
 <hr>
 
