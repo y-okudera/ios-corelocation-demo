@@ -1,0 +1,66 @@
+# 対象にするパス
+included:
+  - ios-corelocation-demo
+  - ios-corelocation-demoTests
+
+# 対象から除外するパス
+excluded:
+  - Pods
+  - Tests/SwiftLintFrameworkTests/Resources
+
+# 採用するopt-inルール
+opt_in_rules:
+  - closure_end_indentation
+  - closure_spacing
+  - conditional_returns_on_newline
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - file_header
+  - first_where
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - private_outlet
+  - redundant_nil_coalescing
+  - sorted_imports
+  - switch_case_on_newline
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+
+file_header:
+  required_pattern: |
+                    \/\/
+                    \/\/  .*\.swift
+                    \/\/  .*?
+                    \/\/
+                    \/\/  Created by .*? on \d{1,4}\/\d{1,2}\/\d{1,2}\.
+                    \/\/  Copyright © \d{4}.*? .*?\. All rights reserved\.
+                    \/\/
+
+# ファイルヘッダのサンプル
+#                    //
+#                    //  AppDelegate.swift
+#                    //  ios-coremotion-accelerometer
+#                    //
+#                    //  Created by OkuderaYuki on 2017/12/30.
+#                    //  Copyright © 2017年 OkuderaYuki. All rights reserved.
+#                    //
+
+file_length: 600
+line_length: 120
+number_separator:
+  minimum_length: 5
+variable_name_min_length:
+  - 3
+  - 2
+force_cast: error
+force_try: error
+
+# 無効にするルール
+disabled_rules:
+  - leading_whitespace
+  - trailing_whitespace
