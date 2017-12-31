@@ -102,11 +102,15 @@ extension ViewController: CLLocationManagerDelegate {
             print("位置情報の設定が「このAppの使用中のみ許可」になっている")
             // 現在地の更新を開始する
             manager.startUpdatingLocation()
+            // 方位の更新を開始する
+            manager.startUpdatingHeading()
 
         case .authorizedWhenInUse:
             print("位置情報の設定が「常に許可」になっている")
             // 現在地の更新を開始する
             manager.startUpdatingLocation()
+            // 方位の更新を開始する
+            manager.startUpdatingHeading()
 
         }
     }
@@ -135,5 +139,14 @@ extension ViewController: CLLocationManagerDelegate {
     /// 位置情報の取得に失敗した時の処理
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("\(error.localizedDescription)")
+    }
+
+    // 方位情報の更新時
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+
+        print("磁北基準:\(newHeading.magneticHeading)")
+
+        let angle = -newHeading.magneticHeading * Double.pi / Double(100)
+        print("angle = \(angle)")
     }
 }
